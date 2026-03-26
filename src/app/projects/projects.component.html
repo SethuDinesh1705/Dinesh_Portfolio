@@ -1,0 +1,26 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">A selection of my recent work</p>
+
+    <!-- Featured Projects -->
+    <div class="featured-projects">
+      <div class="project-card featured" *ngFor="let project of featuredProjects; let i = index" [style.animation-delay]="(i * 0.15) + 's'">
+        <div class="project-image">
+          <div class="image-placeholder">{{ project.image }}</div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-tags">
+            <mat-chip-set aria-label="Project tags">
+              <mat-chip *ngFor="let tag of project.tags" selected>
+                {{ tag }}
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

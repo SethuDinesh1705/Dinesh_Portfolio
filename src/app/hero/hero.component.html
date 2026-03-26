@@ -1,0 +1,47 @@
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Dinesh</span></h1>
+            <p class="hero-subtitle">Senior Front-End Developer &#64; EPAM Systems</p>
+            <p class="hero-description">
+                With 4+ years of experience, I build scalable enterprise applications for global clients including
+                Google and Natixis.
+                Specialized in Angular architecture, performance optimization, accessibility compliance, and AI-assisted
+                development.
+            </p>
+            <div class="hero-buttons">
+                <button mat-raised-button class="btn-primary" (click)="scrollIntoView()">
+                    View My Work
+                </button>
+                <a href="/documents/Dineshkumar_Thangavel_Resume_(19-02-26).pdf" download="Dinesh_Resume.pdf"
+                    mat-stroked-button class="btn-secondary">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="/documents/img_white_bg.png" alt="Dinesh" class="hero-image-img">
+                <div class="image-glow"></div>
+            </div>
+            <div class="floating-card card-1">
+                <mat-icon>code</mat-icon>
+                <span>Angular</span>
+            </div>
+            <div class="floating-card card-2">
+                <mat-icon>terminal</mat-icon>
+                <span>TypeScript</span>
+            </div>
+            <div class="floating-card card-3">
+                <mat-icon>storage</mat-icon>
+                <span>Node</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" (click)="scrollIntoView()">
+        <span>Scroll to explore</span>
+        <mat-icon class="bounce">arrow_downward</mat-icon>
+    </div>
+</section>

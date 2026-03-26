@@ -1,0 +1,23 @@
+<mat-toolbar [class.scrolled]="isScrolled" class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <span class="brand-name">Dineshkumar Thangavel</span>
+      <span class="brand-subtitle">Frontend Engineer</span>
+    </div>
+    
+    <nav class="nav-links">
+      <button mat-button (click)="scrollToSection('about')" class="nav-link">
+        <span>About</span>
+      </button>
+      <button mat-button (click)="scrollToSection('skills')" class="nav-link">
+        <span>Skills</span>
+      </button>
+      <button mat-button (click)="scrollToSection('projects')" class="nav-link">
+        <span>Projects</span>
+      </button>
+      <button mat-button (click)="scrollToSection('contact')" class="nav-link contact-btn">
+        <span>Contact</span>
+      </button>
+    </nav>
+  </div>
+</mat-toolbar>

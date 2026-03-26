@@ -1,0 +1,20 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
+@Component({
+  selector: 'app-about',
+  standalone: true,
+  imports: [CommonModule, MatCardModule, MatIconModule],
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.css'
+})
+export class AboutComponent {
+  stats = [
+    { label: 'Years Experience', value: '4+' },
+    { label: 'Test Coverage', value: '90%+' },
+    { label: 'Global Clients', value: '3+' },
+    { label: 'Code Reviews', value: '500+' }
+  ];
+}
