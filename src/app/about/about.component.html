@@ -1,46 +1,46 @@
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-subtitle">Get to know more about me</p>
+<section id="about" class="about py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-10 bg-white relative">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-3 sm:mb-4">About Me</h2>
+    <p class="section-subtitle text-center text-primary-500 text-sm sm:text-base font-semibold uppercase tracking-widest mb-12 sm:mb-16">Get to know more about me</p>
 
-    <div class="about-content">
-      <div class="about-text">
-        <p class="intro-text">
+    <div class="about-content grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      <div class="about-text space-y-4 sm:space-y-6">
+        <p class="intro-text text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
           I'm a Front-End Developer with <strong>4+ years of experience</strong> building scalable enterprise applications for global clients including Google and Natixis. Currently working at <strong>EPAM Systems</strong>, I specialize in Angular architecture, performance optimization, and accessibility compliance with 90%+ test coverage in business-critical systems.
         </p>
         
-        <p>
+        <p class="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
           Known for leveraging AI-assisted development tools (GitHub Copilot, Gemini) to enhance code quality and automate repetitive tasks. My expertise spans from requirement analysis to production deployment with strong focus on Agile methodologies (SCRUM), Git-based version control, and end-to-end UI delivery.
         </p>
 
-        <p>
+        <p class="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
           Beyond project work, I actively mentor junior developers, support team onboarding, and represent EPAM in CSR initiatives. I've received awards including "Delivery Excellence" from clients and "Google Great Job" badge for delivering critical milestones on schedule.
         </p>
 
-        <div class="about-highlights">
-          <div class="highlight-item">
-            <mat-icon>check_circle</mat-icon>
-            <span>Expert in Angular & TypeScript</span>
+        <div class="about-highlights grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mt-6 sm:mt-8">
+          <div class="highlight-item flex items-center gap-2 p-2 sm:p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <mat-icon class="text-primary-500 text-base sm:text-lg lg:text-xl flex-shrink-0">check_circle</mat-icon>
+            <span class="text-xs sm:text-sm lg:text-base text-gray-800 font-medium leading-tight">Expert in Angular & TypeScript</span>
           </div>
-          <div class="highlight-item">
-            <mat-icon>check_circle</mat-icon>
-            <span>Accessibility Compliance (A11y)</span>
+          <div class="highlight-item flex items-center gap-2 p-2 sm:p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <mat-icon class="text-primary-500 text-base sm:text-lg lg:text-xl flex-shrink-0">check_circle</mat-icon>
+            <span class="text-xs sm:text-sm lg:text-base text-gray-800 font-medium leading-tight">Accessibility Compliance (A11y)</span>
           </div>
-          <div class="highlight-item">
-            <mat-icon>check_circle</mat-icon>
-            <span>Performance & Test Coverage 90%+</span>
+          <div class="highlight-item flex items-center gap-2 p-2 sm:p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <mat-icon class="text-primary-500 text-base sm:text-lg lg:text-xl flex-shrink-0">check_circle</mat-icon>
+            <span class="text-xs sm:text-sm lg:text-base text-gray-800 font-medium leading-tight">Performance & Test Coverage 90%+</span>
           </div>
-          <div class="highlight-item">
-            <mat-icon>check_circle</mat-icon>
-            <span>AI-Assisted Development</span>
+          <div class="highlight-item flex items-center gap-2 p-2 sm:p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <mat-icon class="text-primary-500 text-base sm:text-lg lg:text-xl flex-shrink-0">check_circle</mat-icon>
+            <span class="text-xs sm:text-sm lg:text-base text-gray-800 font-medium leading-tight">AI-Assisted Development</span>
           </div>
         </div>
       </div>
 
-      <div class="stats-grid">
-        <div class="stat-card" *ngFor="let stat of stats; let i = index" [style.animation-delay]="(i * 0.1) + 's'">
-          <div class="stat-value">{{ stat.value }}</div>
-          <div class="stat-label">{{ stat.label }}</div>
+      <div class="stats-grid grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div class="stat-card p-6 sm:p-8 bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl border border-primary-100 text-center hover:shadow-xl transition-all" *ngFor="let stat of stats; let i = index" [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="stat-value text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-2">{{ stat.value }}</div>
+          <div class="stat-label text-xs sm:text-sm lg:text-base text-gray-700 font-semibold">{{ stat.label }}</div>
         </div>
       </div>
     </div>

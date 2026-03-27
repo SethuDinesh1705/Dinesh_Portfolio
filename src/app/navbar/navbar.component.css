@@ -10,84 +10,282 @@
 
 .navbar.scrolled {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+  padding: 5px 0;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 450px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   height: 70px;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
-  gap: 2px;
   cursor: pointer;
   animation: slideInLeft 0.6s ease-out;
+  flex-shrink: 0;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.brand-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+.logo-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  animation: badgePulse 2s ease-in-out infinite, floatIcon 3s ease-in-out infinite;
+}
+
+.badge-icon {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  animation: spin 4s linear infinite;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .brand-name {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 900;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #ffffff 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: nameGlow 3s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.2));
+}
+
+.subtitle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .brand-subtitle {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 2px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  font-weight: 700;
+  animation: subtitleReveal 0.8s ease-out 0.2s both;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge-text {
+  font-size: 9px;
+  color: white;
+  background: linear-gradient(90deg, #FF6B6B 0%, #FF8E53 100%);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  animation: badgeFloat 3s ease-in-out infinite;
 }
 
 .nav-links {
   display: flex;
-  gap: 45px;
+  gap: 10px;
   align-items: center;
   animation: slideInRight 0.6s ease-out;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-link {
   color: white !important;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   transition: all 0.3s ease;
   position: relative;
+  padding: 8px 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.nav-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.nav-text {
+  position: relative;
+  display: inline-block;
+  animation: navItemFadeIn 0.6s ease-out backwards;
+}
+
+.nav-link:nth-child(1) .nav-text {
+  animation-delay: 0s;
+}
+
+.nav-link:nth-child(2) .nav-text {
+  animation-delay: 0.1s;
+}
+
+.nav-link:nth-child(3) .nav-text {
+  animation-delay: 0.2s;
+}
+
+.nav-link:nth-child(4) .nav-text {
+  animation-delay: 0.3s;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background: white;
-  transition: width 0.3s ease;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 2px;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
+.nav-link:hover {
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
 .contact-btn {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border: 2px solid white;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+  color: #333 !important;
+  border: none;
   border-radius: 25px;
-  padding: 6px 20px !important;
+  padding: 8px 22px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFA500, #FFD700);
+  transition: left 0.4s ease;
+  z-index: -1;
+  border-radius: 25px;
 }
 
 .contact-btn:hover {
-  background: white !important;
-  color: #667eea !important;
+  background: linear-gradient(135deg, #FFA500, #FFD700) !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.contact-btn:hover .nav-icon {
+  transform: scale(1.3) rotate(-10deg);
+}
+
+/* Animations */
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes nameGlow {
+  0%, 100% {
+    filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 2px 15px rgba(255, 215, 0, 0.5));
+  }
+}
+
+@keyframes subtitleReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-20px) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
 }
 
 @keyframes slideInLeft {
@@ -112,23 +310,79 @@
   }
 }
 
+@keyframes navItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-container {
-    height: 60px;
+    height: 65px;
     padding: 0 20px;
-    gap: 15px;
   }
 
   .brand-name {
-    font-size: 18px;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  .brand-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .logo-badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .badge-icon {
+    font-size: 24px;
+  }
+
+  .badge-text {
+    display: none;
+  }
+
+  .brand-wrapper {
+    gap: 12px;
   }
 
   .nav-links {
-    gap: 25px;
-    flex-wrap: wrap;
+    gap: 5px;
   }
 
   .nav-link {
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    padding: 6px 12px !important;
+  }
+
+  .nav-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-link:hover .nav-text {
+    display: inline;
+  }
+
+  .contact-btn {
+    padding: 6px 12px !important;
+  }
+
+  .contact-btn .nav-text {
+    display: inline;
   }
 }

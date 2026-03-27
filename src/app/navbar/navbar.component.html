@@ -1,22 +1,27 @@
 <mat-toolbar [class.scrolled]="isScrolled" class="navbar">
   <div class="navbar-container">
     <div class="logo">
-      <span class="brand-name">Dineshkumar Thangavel</span>
-      <span class="brand-subtitle">Frontend Engineer</span>
+      <div class="brand-wrapper">
+        <span class="brand-icon">💼</span>
+        <div class="brand-text">
+          <span class="brand-name">Dineshkumar Thangavel</span>
+          <span class="brand-subtitle">Frontend Engineer</span>
+        </div>
+      </div>
     </div>
     
     <nav class="nav-links">
       <button mat-button (click)="scrollToSection('about')" class="nav-link">
-        <span>About</span>
+        <span class="nav-text">About</span>
       </button>
       <button mat-button (click)="scrollToSection('skills')" class="nav-link">
-        <span>Skills</span>
+        <span class="nav-text">Skills</span>
       </button>
       <button mat-button (click)="scrollToSection('projects')" class="nav-link">
-        <span>Projects</span>
+        <span class="nav-text">Projects</span>
       </button>
       <button mat-button (click)="scrollToSection('contact')" class="nav-link contact-btn">
-        <span>Contact</span>
+        <span class="nav-text">Contact</span>
       </button>
     </nav>
   </div>

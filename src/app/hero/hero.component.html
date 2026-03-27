@@ -1,47 +1,47 @@
-<section class="hero">
-    <div class="hero-content">
+<section class="hero min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-10 py-20 sm:py-32 bg-gradient-to-br from-primary-500 via-purple-600 to-secondary-500 relative overflow-hidden mt-[70px]">
+    <div class="hero-content grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center max-w-7xl mx-auto relative z-10 w-full">
         <div class="hero-text">
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Dinesh</span></h1>
-            <p class="hero-subtitle">Senior Front-End Developer &#64; EPAM Systems</p>
-            <p class="hero-description">
+            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">Hi, I'm <span class="highlight">Dinesh</span></h1>
+            <p class="hero-subtitle text-xl sm:text-2xl lg:text-3xl text-white text-opacity-90 mb-4 sm:mb-6 font-medium">Senior Front-End Developer &#64; EPAM Systems</p>
+            <p class="hero-description text-sm sm:text-base lg:text-lg text-white text-opacity-80 leading-relaxed mb-6 sm:mb-8">
                 With 4+ years of experience, I build scalable enterprise applications for global clients including
                 Google and Natixis.
                 Specialized in Angular architecture, performance optimization, accessibility compliance, and AI-assisted
                 development.
             </p>
-            <div class="hero-buttons">
-                <button mat-raised-button class="btn-primary" (click)="scrollIntoView()">
+            <div class="hero-buttons flex flex-col sm:flex-row gap-4 mb-12 sm:mb-20 lg:mb-24">
+                <button mat-raised-button class="btn-primary px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base w-full sm:w-auto" (click)="scrollIntoView()">
                     View My Work
                 </button>
                 <a href="/documents/Dineshkumar_Thangavel_Resume_(19-02-26).pdf" download="Dinesh_Resume.pdf"
-                    mat-stroked-button class="btn-secondary">
+                    mat-stroked-button class="btn-secondary px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-center w-full sm:w-auto">
                     Download Resume
                 </a>
             </div>
         </div>
 
-        <div class="hero-image">
-            <div class="image-container">
-                <img src="/documents/img_white_bg.png" alt="Dinesh" class="hero-image-img">
-                <div class="image-glow"></div>
+        <div class="hero-image relative h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+            <div class="image-container relative w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 flex items-center justify-center">
+                <img src="/documents/img_white_bg.png" alt="Dinesh" class="hero-image-img w-44 sm:w-56 lg:w-72 h-44 sm:h-56 lg:h-72 rounded-full object-cover">
+                <div class="image-glow absolute"></div>
             </div>
-            <div class="floating-card card-1">
+            <div class="floating-card card-1 absolute top-0 left-0 sm:left-auto sm:top-8 md:left-12">
                 <mat-icon>code</mat-icon>
                 <span>Angular</span>
             </div>
-            <div class="floating-card card-2">
+            <div class="floating-card card-2 absolute bottom-8 sm:bottom-12 right-0 sm:right-auto md:right-16">
                 <mat-icon>terminal</mat-icon>
                 <span>TypeScript</span>
             </div>
-            <div class="floating-card card-3">
+            <div class="floating-card card-3 absolute bottom-0 left-8 sm:left-auto sm:bottom-4 md:left-0">
                 <mat-icon>storage</mat-icon>
                 <span>Node</span>
             </div>
         </div>
     </div>
 
-    <div class="scroll-indicator" (click)="scrollIntoView()">
-        <span>Scroll to explore</span>
-        <mat-icon class="bounce">arrow_downward</mat-icon>
+    <div class="scroll-indicator mt-12 sm:mt-20 lg:mt-16 cursor-pointer text-center w-full flex flex-col items-center justify-center" (click)="scrollIntoView()">
+        <span class="text-white text-opacity-75 text-xs sm:text-sm mb-3">Scroll to explore</span>
+        <mat-icon class="bounce text-white text-opacity-75 block mx-auto">arrow_downward</mat-icon>
     </div>
 </section>

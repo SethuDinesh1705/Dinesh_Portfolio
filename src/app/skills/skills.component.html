@@ -1,38 +1,56 @@
-<section id="skills" class="skills">
-  <div class="container">
-    <h2 class="section-title">Skills & Expertise</h2>
-    <p class="section-subtitle">Tools and technologies I work with</p>
+<section id="skills" class="skills py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-10 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-3 sm:mb-4">Skills & Expertise</h2>
+    <p class="section-subtitle text-center text-primary-500 text-sm sm:text-base font-semibold uppercase tracking-widest mb-12 sm:mb-16">Tools and technologies I work with</p>
 
-    <div class="skills-grid">
-      <div class="skill-category" *ngFor="let skill of skills; let i = index" [style.animation-delay]="(i * 0.15) + 's'">
-        <div class="category-header">
-          <mat-icon class="category-icon">{{ skill.icon }}</mat-icon>
-          <h3>{{ skill.category }}</h3>
+    <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+      <div class="skill-category p-6 sm:p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300" *ngFor="let skill of skills; let i = index" [style.animation-delay]="(i * 0.15) + 's'">
+        <div class="category-header flex items-center gap-3 sm:gap-4 mb-6">
+          <mat-icon class="category-icon text-primary-500 text-3xl sm:text-4xl">{{ skill.icon }}</mat-icon>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900">{{ skill.category }}</h3>
         </div>
 
-        <div class="skills-list">
+        <div class="skills-list space-y-4">
           <div class="skill-item" *ngFor="let item of skill.items">
-            <div class="skill-name-container">
-              <span class="skill-name">{{ item.name }}</span>
-              <span class="skill-percentage">{{ item.level }}%</span>
+            <div class="skill-name-container flex justify-between items-center mb-2">
+              <span class="skill-name text-sm sm:text-base font-semibold text-gray-700">{{ item.name }}</span>
+              <span class="skill-percentage text-xs sm:text-sm font-bold text-primary-600">{{ item.level }}%</span>
             </div>
-            <mat-progress-bar mode="determinate" [value]="item.level" class="skill-bar"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" [value]="item.level" class="skill-bar h-2 rounded-full"></mat-progress-bar>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="additional-skills">
-      <h3>Expertise Areas</h3>
-      <div class="tech-tags">
-        <span class="tech-tag">Page Object Model (POM)</span>
-        <span class="tech-tag">Server-Side Pagination</span>
-        <span class="tech-tag">Performance Optimization</span>
-        <span class="tech-tag">Test Coverage 90%+</span>
-        <span class="tech-tag">Accessibility Auditing</span>
-        <span class="tech-tag">Enterprise Applications</span>
-        <span class="tech-tag">Google Standards</span>
-        <span class="tech-tag">Banking Domain</span>
+    <div class="additional-skills bg-white rounded-xl shadow-lg p-8 sm:p-10 lg:p-12">
+      <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Advanced Frontend Concepts & Performance Optimization</h3>
+      <div class="tech-tags flex flex-wrap gap-3">
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Lazy Loading</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Reactive Forms</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Dependency Injection</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Angular Routing</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">HTTP Interceptors</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Performance Optimization</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Google Lighthouse</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">PageSpeed Insights</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Change Detection</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">RxJS & Observables</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Custom Directives</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Advanced Pipes</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">OnPush Strategy</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Standalone Components</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Angular Signals</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Route Guards</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">TrackBy Function</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Virtual Scrolling</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Code Splitting</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Tree Shaking</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Web Vitals</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Debounce & Throttle</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Async Pipe</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Subject & BehaviorSubject</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">switchMap / mergeMap</span>
+        <span class="tech-tag inline-block px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-primary-100 to-blue-100 text-primary-700 text-xs sm:text-sm font-semibold rounded-full border border-primary-200 hover:bg-primary-200 transition-colors">Accessibility (ARIA)</span>
       </div>
     </div>
   </div>

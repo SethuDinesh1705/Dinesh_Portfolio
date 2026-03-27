@@ -29,7 +29,7 @@ export class SkillsComponent {
       icon: 'code',
       items: [
         { name: 'Angular & Angular Dart', level: 96 },
-        { name: 'TypeScript', level: 94 },
+        { name: 'TypeScript', level: 90 },
         { name: 'HTML5 & CSS3', level: 98 },
         { name: 'JavaScript (ES6+)', level: 96 }
       ]
@@ -39,9 +39,9 @@ export class SkillsComponent {
       icon: 'build',
       items: [
         { name: 'RxJS & Observables', level: 90 },
-        { name: 'Angular Material & Flex Layout', level: 94 },
-        { name: 'Responsive Design', level: 96 },
-        { name: 'Accessibility (A11y) Compliance', level: 92 }
+        { name: 'Angular Material & Flex Layout', level: 95 },
+        { name: 'Responsive Design', level: 95 },
+        { name: 'Accessibility (A11y) Compliance', level: 90 }
       ]
     },
     {
@@ -49,9 +49,9 @@ export class SkillsComponent {
       icon: 'settings',
       items: [
         { name: 'Karma & Jasmine', level: 90 },
-        { name: 'Git, GitHub & Bitbucket', level: 93 },
-        { name: 'REST API & gRPC', level: 88 },
-        { name: 'Agile (SCRUM)', level: 92 }
+        { name: 'Git, GitHub & Bitbucket', level: 90 },
+        { name: 'REST API & gRPC', level: 85 },
+        { name: 'Agile (SCRUM)', level: 90 }
       ]
     },
     {
@@ -59,9 +59,9 @@ export class SkillsComponent {
       icon: 'terminal',
       items: [
         { name: 'NodeJS (Backend)', level: 75 },
-        { name: 'Core Java', level: 80 },
-        { name: 'Dart', level: 78 },
-        { name: 'GitHub Copilot & AI Tools', level: 92 }
+        { name: 'Sql', level: 50 },
+        { name: 'Dart', level: 75 },
+        { name: 'GitHub Copilot & AI Tools', level: 90 }
       ]
     }
   ];
