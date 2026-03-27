@@ -39,7 +39,7 @@
 
       <div class="stats-grid grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
         <div class="stat-card p-6 sm:p-8 bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl border border-primary-100 text-center hover:shadow-xl transition-all" *ngFor="let stat of stats; let i = index" [style.animation-delay]="(i * 0.1) + 's'">
-          <div class="stat-value text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-2">{{ stat.value }}</div>
+          <div class="stat-value text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-2">{{ stat.value }}</div>
           <div class="stat-label text-xs sm:text-sm lg:text-base text-gray-700 font-semibold">{{ stat.label }}</div>
         </div>
       </div>

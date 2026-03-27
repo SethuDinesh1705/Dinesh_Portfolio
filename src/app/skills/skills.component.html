@@ -3,7 +3,7 @@
     <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-3 sm:mb-4">Skills & Expertise</h2>
     <p class="section-subtitle text-center text-primary-500 text-sm sm:text-base font-semibold uppercase tracking-widest mb-12 sm:mb-16">Tools and technologies I work with</p>
 
-    <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+    <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-8 mb-12 sm:mb-16">
       <div class="skill-category p-6 sm:p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300" *ngFor="let skill of skills; let i = index" [style.animation-delay]="(i * 0.15) + 's'">
         <div class="category-header flex items-center gap-3 sm:gap-4 mb-6">
           <mat-icon class="category-icon text-primary-500 text-3xl sm:text-4xl">{{ skill.icon }}</mat-icon>

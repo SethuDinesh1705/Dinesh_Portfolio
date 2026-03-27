@@ -7,11 +7,11 @@
         <div class="featured-projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-8">
             <div class="project-card featured bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" *ngFor="let project of featuredProjects; let i = index"
                 [style.animation-delay]="(i * 0.15) + 's'">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="project-image md:col-span-1">
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="project-image">
                         <div class="image-placeholder bg-gradient-to-br from-primary-400 to-secondary-500 h-48 md:h-64 flex items-center justify-center text-white text-4xl sm:text-5xl font-bold">{{ project.image }}</div>
                     </div>
-                    <div class="project-content md:col-span-2 p-6 sm:p-8 flex flex-col justify-between">
+                    <div class="project-content p-6 sm:p-8 flex flex-col justify-between">
                         <div>
                             <h3 class="project-title text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{{ project.title }}</h3>
                             <p class="project-description text-sm sm:text-base text-gray-700 leading-relaxed mb-6">{{ project.description }}</p>

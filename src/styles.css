@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Overrides */
+.max-w-7xl {
+    max-width: 100rem;
+}
+
 /* Global Styles */
 
 * {
